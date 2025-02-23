@@ -81,7 +81,7 @@ export default function Home() {
           <div>
             {/* numOfTokensMinted is of type BigInt and needs to be converted to integer */}
             {numOfTokensMinted != undefined ? parseInt(numOfTokensMinted) : ""}
-            /10 have been minted (Click <a style={{color: 'red'}} href="https://testnets.opensea.io/collection/murislw3punks">here</a> to see the collection)
+            /10 have been minted (Click <a style={{color: 'red'}} href="https://testnets.opensea.io/collection/murislw3punks" target="_blank" rel="noopener noreferrer">here</a> to see the collection)
           </div>
 
           {/* <div className="mt-1">

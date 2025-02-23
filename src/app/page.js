@@ -77,11 +77,11 @@ export default function Home() {
           <h2 className={"text-lg"}>
             It is an NFT collection for LearnWeb3 students.
           </h2>
-
+      
           <div>
             {/* numOfTokensMinted is of type BigInt and needs to be converted to integer */}
             {numOfTokensMinted != undefined ? parseInt(numOfTokensMinted) : ""}
-            /10 have been minted
+            /10 have been minted (Click <a style={{color: 'red'}} href="https://testnets.opensea.io/collection/murislw3punks">here</a> to see the collection)
           </div>
 
           {/* <div className="mt-1">

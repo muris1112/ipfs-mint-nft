@@ -100,7 +100,7 @@ export default function Home() {
         </div>
 
         <div className="flex border-2 w-[40%]">
-          <img src={"/learnweb3punks.png"} />
+          <img src={"/LW3Punks/1.png"} />
         </div>
       </div>
 

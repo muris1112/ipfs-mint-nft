@@ -17,6 +17,8 @@ export default function Home() {
   //this hook returns true if the user has connected their walllet and false when they haven't
   const account = useAccount();
 
+  console.log(account);
+
   //this executes the tokenIds function in our deployed contract
   const numOfTokensMinted = useReadContract({
     abi,
@@ -82,8 +84,8 @@ export default function Home() {
             /10 have been minted
           </div>
 
-          <div className="mt-1">
-            {account ? (
+          {/* <div className="mt-1">
+            {account.isConnected === true ? (
               // if the user has connected their wallet
               <button
                 className="bg-blue-500 px-4 py-2 font-sans rounded-md disabled:cursor-not-allowed disabled:bg-blue-900"
@@ -96,7 +98,22 @@ export default function Home() {
               //if the user hasn't connected their wallet
               <ConnectButton />
             )}
+          </div> */}
+          
+          <div className="mt-1">
+            <ConnectButton />
           </div>
+          <div className="mt-1">
+              <button
+                className="bg-blue-500 px-4 py-2 font-sans rounded-md disabled:cursor-not-allowed disabled:bg-blue-900"
+                disabled={isLoading ? true : false}
+                onClick={mintToken}
+                style={{ display: account.isConnected ? "block" : "none" }}
+              >
+                {isLoading ? "Loading..." : "Mint!"}
+              </button>
+          </div>
+          
         </div>
 
         <div className="flex border-2 w-[40%]">
